@@ -1,0 +1,20 @@
+<!-- success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Success</title>
+</head>
+<body>
+    <h1>Authenticated Successfully</h1>
+    <p>Your user ID: <span id="userId"></span></p>
+
+    <script>
+        // Extract user ID from URL and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        document.getElementById('userId').innerText = userId;
+    </script>
+</body>
+</html>
